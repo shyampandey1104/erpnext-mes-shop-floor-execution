@@ -1,30 +1,104 @@
 {
- "charts": [],
- "content": "[{\"type\":\"header\",\"data\":{\"text\":\"Erpnext Mes Shop Floor Execution Workspace\",\"level\":4}}]",
+ "charts": [
+  {
+   "chart_name": "Erpnext Mes Shop Floor Execution Volume Trend",
+   "label": "Erpnext Mes Shop Floor Execution Volume Trend"
+  }
+ ],
+ "content": "[{\"type\": \"header\", \"data\": {\"text\": \"Erpnext Mes Shop Floor Execution Workspace\", \"level\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Erpnext Mes Shop Floor Execution Operations\"}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Audit & Compliance\"}}]",
  "creation": "2026-04-01 10:00:00.000000",
  "custom_blocks": [],
  "docstatus": 0,
  "doctype": "Workspace",
  "for_user": "",
  "hide_custom": 0,
- "icon": "octicon octicon-book",
+ "icon": "octicon octicon-package",
  "idx": 0,
  "is_hidden": 0,
  "label": "Erpnext Mes Shop Floor Execution",
- "links": [],
+ "links": [
+  {
+   "label": "Operational Documents",
+   "type": "Card Break"
+  },
+  {
+   "doctype": "Erpnext Mes Shop Floor Execution Entry",
+   "label": "Erpnext Mes Shop Floor Execution Entry",
+   "link_to": "Erpnext Mes Shop Floor Execution Entry",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "label": "Audit & Reports",
+   "type": "Card Break"
+  },
+  {
+   "doctype": "Erpnext Mes Shop Floor Execution Audit Log",
+   "label": "Erpnext Mes Shop Floor Execution Audit Log",
+   "link_to": "Erpnext Mes Shop Floor Execution Audit Log",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "is_query_report": 1,
+   "label": "Erpnext Mes Shop Floor Execution Summary",
+   "link_to": "Erpnext Mes Shop Floor Execution Summary",
+   "link_type": "Report",
+   "type": "Link"
+  },
+  {
+   "label": "Configuration",
+   "type": "Card Break"
+  },
+  {
+   "doctype": "Erpnext Mes Shop Floor Execution Settings",
+   "label": "Erpnext Mes Shop Floor Execution Settings",
+   "link_to": "Erpnext Mes Shop Floor Execution Settings",
+   "link_type": "DocType",
+   "type": "Link"
+  }
+ ],
  "modified": "2026-04-01 10:00:00.000000",
  "modified_by": "Administrator",
  "module": "Mes_Core",
  "name": "Erpnext Mes Shop Floor Execution",
  "owner": "Administrator",
  "public": 1,
- "quick_lists": [],
+ "quick_lists": [
+  {
+   "document_type": "Erpnext Mes Shop Floor Execution Entry",
+   "label": "Recent Erpnext Mes Shop Floor Execution Entries"
+  }
+ ],
  "roles": [
   {
    "role": "System Manager"
+  },
+  {
+   "role": "Accounts User"
   }
  ],
  "sequence_id": 1,
- "shortcuts": [],
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "All Erpnext Mes Shop Floor Execution Entrys",
+   "link_to": "Erpnext Mes Shop Floor Execution Entry",
+   "type": "DocType"
+  },
+  {
+   "color": "Green",
+   "label": "System Settings",
+   "link_to": "Erpnext Mes Shop Floor Execution Settings",
+   "type": "DocType"
+  },
+  {
+   "color": "Blue",
+   "label": "Compliance Digest",
+   "link_to": "Erpnext Mes Shop Floor Execution Summary",
+   "type": "Report"
+  }
+ ],
  "title": "Erpnext Mes Shop Floor Execution"
 }

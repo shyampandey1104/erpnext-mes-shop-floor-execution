@@ -4,7 +4,7 @@
 app_name = "mes"
 app_title = "Erpnext Mes Shop Floor Execution"
 app_publisher = "Shyamkumar Pandey"
-app_description = "Erpnext Mes Shop Floor Execution for Frappe and ERPNext"
+app_description = "Erpnext Mes Shop Floor Execution - Enterprise Multi-DocType Solution for Frappe & ERPNext"
 app_email = "shyampandey1104@gmail.com"
 app_license = "MIT"
 
@@ -16,16 +16,22 @@ app_include_js = "/assets/mes/js/mes.bundle.js"
 # Document Events
 # ---------------
 doc_events = {
-    "DocType Event": {
-        "on_submit": "mes.engine.on_document_submit",
-        "on_cancel": "mes.engine.on_document_cancel"
+    "Erpnext Mes Shop Floor Execution Entry": {
+        "validate": "mes.services.validator.EnterpriseValidationEngine.validate_compliance_rules",
+        "on_submit": "mes.services.integration_service.EnterpriseIntegrationService.verify_remote_status"
     }
 }
 
-# Scheduled Tasks
-# ---------------
+# Scheduled Background Tasks
+# --------------------------
 scheduler_events = {
+    "hourly": [
+        "mes.tasks.hourly_sync"
+    ],
     "daily": [
-        "mes.engine.daily_scheduled_sync"
+        "mes.tasks.daily_reconciliation"
+    ],
+    "weekly": [
+        "mes.tasks.weekly_digest"
     ]
 }
